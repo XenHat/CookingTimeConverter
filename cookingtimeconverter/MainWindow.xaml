@@ -1,0 +1,31 @@
+﻿<Window x:Class="CookTimeWPF.MainWindow"
+        x:Name="CalcWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CookTimeWPF"
+        mc:Ignorable="d"
+        Title="Cooking Time Converter" Height="220.653" Width="195.777" BorderBrush="{DynamicResource AeroColor}" ResizeMode="NoResize">
+    <Grid Margin="0,0,2,1">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="HeatPointsBox" HorizontalAlignment="Left" Height="23" Margin="10,121,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="HeatPointsBox_TextChanged" />
+        <TextBox x:FieldModifier="public" x:Name="FarenheitBox" HorizontalAlignment="Left" Height="23" Margin="10,65,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="FarenheitBox_TextChanged" />
+        <TextBox x:Name="MinutesBox" HorizontalAlignment="Left" Height="23" Margin="10,149,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="MinutesBox_TextChanged" />
+        <TextBox x:FieldModifier="public" x:Name="KelvinBox" HorizontalAlignment="Left" Height="23" Margin="10,93,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="KelvinBox_TextChanged" />
+        <StackPanel Margin="10,37,55,128" Orientation="Horizontal">
+            <TextBox x:FieldModifier="public" x:Name="CelsiusBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="CelsiusBox_TextChanged" />
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="°C" VerticalAlignment="Top" Height="23" Width="15" />
+        </StackPanel>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="°F" VerticalAlignment="Top" Height="22" Width="15" Margin="130,66,0,0" />
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="°K" VerticalAlignment="Top" Height="23" Width="15" Margin="130,93,0,0" />
+        <TextBlock TextWrapping="Wrap" Text="e" VerticalAlignment="Top" Height="23" Margin="130,121,0,0" HorizontalAlignment="Left" Width="16" />
+        <TextBlock TextWrapping="Wrap" Text="Minutes" VerticalAlignment="Top" Height="23" Margin="130,149,0,0" HorizontalAlignment="Left" Width="50" />
+        <Button x:Name="ResetButton" Content="🔓" HorizontalAlignment="Left" Margin="140,121,0,0" VerticalAlignment="Top" Width="25" Height="23" RenderTransformOrigin="0.5,0.761" FontSize="14" Background="{x:Null}" Click="Button_Click" />
+    </Grid>
+</Window>
